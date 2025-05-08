@@ -10,6 +10,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Tilemap,
 		C3.Behaviors.solid,
 		C3.Plugins.Browser,
+		C3.Plugins.Audio,
 		C3.Behaviors.EightDir.Cnds.IsMoving,
 		C3.Plugins.Sprite.Acts.SetAnimSpeed,
 		C3.Plugins.System.Cnds.Else,
@@ -28,12 +29,10 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.SetSize,
 		C3.Plugins.Sprite.Cnds.IsVisible,
 		C3.Plugins.System.Acts.GoToLayout,
+		C3.Plugins.Audio.Acts.StopAll,
 		C3.Behaviors.EightDir.Acts.SetIgnoreInput,
 		C3.Plugins.System.Cnds.OnLayoutStart,
-		C3.Plugins.Mouse.Acts.SetCursor,
-		C3.Behaviors.Pin.Acts.PinByProperties,
-		C3.Plugins.Mouse.Exps.X,
-		C3.Plugins.Mouse.Exps.Y,
+		C3.Plugins.Audio.Acts.Play,
 		C3.Plugins.Sprite.Acts.MoveAtAngle,
 		C3.Behaviors.scrollto.Acts.SetEnabled,
 		C3.Plugins.Mouse.Acts.SetCursor2,
@@ -47,8 +46,8 @@ self.C3_GetObjectRefTable = function () {
 self.C3_JsPropNameTable = [
 	{direcao: 0},
 	{"8Direções": 0},
-	{Protagonista: 0},
 	{CentrarEm: 0},
+	{Protagonista: 0},
 	{Mira: 0},
 	{Mouse: 0},
 	{Fixar: 0},
@@ -82,7 +81,8 @@ self.C3_JsPropNameTable = [
 	{Sprite16: 0},
 	{EsterEGG: 0},
 	{seta: 0},
-	{Sprite17: 0}
+	{Sprite17: 0},
+	{Áudio: 0}
 ];
 
 self.InstanceType = {
@@ -118,5 +118,6 @@ self.InstanceType = {
 	Sprite16: class extends self.ISpriteInstance {},
 	EsterEGG: class extends self.ISpriteInstance {},
 	seta: class extends self.ISpriteInstance {},
-	Sprite17: class extends self.ISpriteInstance {}
+	Sprite17: class extends self.ISpriteInstance {},
+	Áudio: class extends self.IInstance {}
 }
